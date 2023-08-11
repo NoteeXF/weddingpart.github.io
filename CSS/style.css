@@ -1,6 +1,8 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,500&display=swap');
+
 
 
 
@@ -174,6 +176,7 @@ footer{
     flex-direction: column;
     align-items: center;
     margin: 0 15px;
+    
   }
   
   .countdown-item small {
@@ -210,8 +213,9 @@ footer{
   
   .salam-content {
     text-align: center;
-    background-color: #fcb2c3;
-    padding: 20px 20px;
+    background: linear-gradient(45deg, #FCAEAE, #F97E7E, #F97E7E, #FCAEAE);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 70px 70px;
     
   }
 
@@ -249,7 +253,9 @@ footer{
 
 .couple-section{
     padding: 80px 0px 80px;
-    background-color: #ffff;
+    background-image: url(../CSS/6562735.png);
+   background-size: cover;
+    min-height: 111px;
 
 }
 
@@ -278,37 +284,157 @@ footer{
     max-width: 280px;
     width: 70%;
     border-radius: 6%;
-    border:10px solid #fb839e;
+    border:10px solid #FCAEAE;
 }
 
+.container-fluid {
+    background: linear-gradient(45deg, #FCAEAE, #F97E7E, #F97E7E, #FCAEAE);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 0 15px;
+  }
+  
+  
 
+.container-fluid .container {
+    padding: 0 15px;
+}
 
 .couple-section .couple h3{
     font-size: 40px;
     margin: 15px 0;
-    font-weight: normal;
+    font-weight: 594;
     font-family: 'Great Vibes', cursive;
     letter-spacing: 2px;
 }
 
+/* event */
 
 .section-title{
     flex: 0 0 100%;
     max-width: 100%;
     padding: 0 15px;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+}
+
+.section-title h1{
+    font-family: 'EB Garamond', serif;
+    font-size: 35px;
+}
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  bottom: 11px;
+  left: calc(50% - 80px);
+  background: #E47A2E;
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  bottom: 11px;
+  right: calc(50% - 80px);
+  background: #E47A2E;
 }
 
 .section-title h2{
     font-size: 45px;
     color: #000000;
-    font-weight: 700;
-    font-family: 'Great Vibes', cursive;
+    font-weight: 500;
+    font-family: 'EB Garamond', serif;
     letter-spacing: 2px;
 }
 
+.rowku {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
 
+.rowku .col-md-6{
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.rowku .col-md-6:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+.rowku .col-md-6 .maps{
+    padding-top: 31px;
+}
+.rowku .col-md-6 a{
+    text-decoration: none;
+    border: 1px solid #f5bcbc;
+    background: #FF8989;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 33px;
+  
+  }
+  
+.rowku .col-md-6 a:hover{
+    background: white;
+    color: #f5bcbc;
+  }
+
+.rowku .col-md-6 img{
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+}
+
+.text-center {
+    text-align: center;
+  }
+  
+  .text-md-right {
+    text-align: right;
+  }
+  
+  .text-md-left {
+    text-align: left;
+  }
+  
+  h4 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #777;
+  }
+  
+  .maps {
+    margin-top: 20px;
+  }
+  
+  .maps a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+  }
+  
+  .maps a:hover {
+    background-color: #0056b3;
+  }
 /* commentar */
 
 .comment-list {
@@ -422,6 +548,7 @@ button:hover {
         flex: 0 0 50% ;
         max-width: 50%;
         padding: 0 60px;
+        
     }
 
     .countdown-item h2{
@@ -432,6 +559,10 @@ button:hover {
         font-size: 15px;
     }
 
+    .salam .salam-content{
+        padding: 20px 20px;
+    }
+    
     .salam .salam-content h4{
         font-size: 15px;
         padding: 30px 30px;
@@ -449,6 +580,19 @@ button:hover {
     .couple-section .couple:nth-child(2){
         margin-top: 55px;
     }
+    .rowku{
+        padding-bottom: 24px;
+    }
+    .rowku .col-md-6{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .rowku .col-md-6 img{
+        width: 70%;
+    }
+
+
 
 }
 
