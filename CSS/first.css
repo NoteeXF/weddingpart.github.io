@@ -68,7 +68,7 @@ footer{
 }
 
 .first-section{
-  min-height: 155vh;
+  min-height: 100vh;
 }
 
 .first-section .slide{
@@ -93,7 +93,7 @@ footer{
  z-index: -1;
 }
 .first-section .row{
-  min-height: 155vh;
+  min-height: 100vh;
 }
 
 .first-section .home-content{
@@ -125,6 +125,15 @@ footer{
   font-size: 20px;
   color: #ffff;
   padding: 18px 30px 18px 30px;
+  
+}
+
+@media(max-width:576px){
+ 
+  .first-section .slide{
+
+      height: 896px;
+  }
   
 }
 
