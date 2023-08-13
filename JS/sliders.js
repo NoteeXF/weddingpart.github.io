@@ -1,21 +1,16 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function () {
-    const slidersContainer = document.querySelectorAll(".slider-container");
+  const slider = document.querySelector(".slidera"); 
+  const slides = document.querySelectorAll(".slidesr"); 
+  let currentIndex = slides.length - 1;
 
-    slidersContainer.forEach((container) => {
-        const slider = container.querySelector(".sliders");
-        const slides = container.querySelectorAll(".slidesr");
-        let currentIndex = 0;
+  function slideTo(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-        function slideTo(index) {
-            slider.style.transform = `translateX(-${index * 100}%)`;
-        }
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    slideTo(currentIndex);
+  }
 
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            slideTo(currentIndex);
-        }
-
-        setInterval(nextSlide, 5000); // Change slide every 5 seconds
-    });
+  setInterval(prevSlide, 5000); 
 });

@@ -299,6 +299,7 @@ footer{
   padding: 0 15px;
 }
 
+
 .couple-section .couple h3{
   font-size: 40px;
   margin: 15px 0;
@@ -352,12 +353,13 @@ background: #E47A2E;
 .slider-container {
     width: 100%;
     overflow: hidden;
+    position: relative;
   }
   
   .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    animation: slideAnimation 9s infinite; /* Adjust the duration based on your needs */
+    animation: slideAnimation 19s infinite; /* Adjust the duration based on your needs */
   }
   
   @keyframes slideAnimation {
@@ -376,41 +378,61 @@ background: #E47A2E;
     flex: 0 0 100%;
     object-fit: cover;
   }
+ 
+  .slidera { 
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    animation:  slideAnimationR infinite 19s;
+  }
   
-.event-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 
-.event-card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    overflow: hidden;
-}
+  .slidesr { 
+    flex: 0 0 100%;
+    object-fit: cover;
+    }
 
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.event-img {
-    max-width: 100%;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.event-info {
+    @keyframes slideAnimationR {
+      0%, 100% {
+        transform: translateX(-200%);
+      }
+      33.33% {
+        transform: translateX(-100%);
+      }
+      66.66% {
+        transform: translateX(0%);
+      }
+    }
+    .event-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+  
+  .event-card {
+      width: calc(33.33% - 20px); /* Menggunakan 3 kolom dengan sedikit jarak */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+      overflow: hidden;
+  }
+  
+  /* ... (Gaya lainnya tetap sama seperti sebelumnya) ... */
+  
+  .event-title {
+      font-size: 1.2rem; /* Mengurangi ukuran font */
+      color: #333;
+      margin-bottom: 5px;
+  }
+  
+  .event-info {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -419,116 +441,119 @@ background: #E47A2E;
     text-align: center;
 }
 
-.event-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.event-location, .event-time {
-    color: #666;
-    margin: 5px 0;
-}
-
-.map-button {
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #f5bcbc;
-    background: #FF8989;
-    padding: 8px 12px;
-    color: white;
-    border-radius: 6px;
-    margin-top: 15px;
-}
-
-.map-button:hover {
-    background: white;
-    color: #f5bcbc;
-}
-
-.sliders {
-    /* ... (kode lainnya) ... */
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(-100%); /* Tambahkan baris ini */
-}
-
-.slidesr {
-    /* ... (kode lainnya) ... */
-    width: 100%;
-}
-
-/* Tambahkan CSS berikut untuk mengatur transisi ke kanan */
-.slide-rtl {
-    animation: slideToRight 5s infinite;
-}
-
-@keyframes slideToRight {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
+  .event-location, .event-time {
+      font-size: 0.9rem; /* Mengurangi ukuran font */
+      color: #666;
+      margin: 3px 0; /* Mengurangi margin */
+  }
+  
+  .map-button {
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid #f5bcbc;
+      background: #FF8989;
+      padding: 6px 10px; 
+      color: white;
+      border-radius: 6px;
+      margin-top: 10px; 
+  }
+  
+  /* ... (Gaya lainnya tetap sama seperti sebelumnya) ... */
+  
 
 /* commentar */
 
-.comment-list {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
-.sliders {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slidesr {
-    flex: 0 0 100%;
-    width: 100%;
-}
-
-
-form {
+.commentar {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
 }
 
-.commentar .comment-form h2{
-  padding: 20px 20px;
+.comment-form {
+  flex: 1;
 }
 
-label {
+.comment-list {
+  flex: 1;
+}
+
+/* Gaya untuk formulir komentar */
+.comment-form h2,
+.comment-list h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.comment-form label {
+  font-weight: bold;
   margin-bottom: 5px;
+  display: block;
 }
 
-input,
-textarea {
-  padding: 8px;
-  margin-bottom: 10px;
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.comment-form textarea {
   resize: vertical;
 }
 
-button {
-  padding: 10px;
-  background-color: #007bff;
+.comment-form button {
+  background-color: #ff6b6b;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  display: block;
+  margin: 0 auto;
 }
 
-button:hover {
-  background-color: #0056b3;
+.comment-form button:hover {
+  background-color: #e05151;
 }
+
+/* Gaya untuk daftar komentar */
+.comment-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-list li {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-list li h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.comment-list li p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
 
 
 /* our gallery */
@@ -562,6 +587,12 @@ button:hover {
   html {
       font-size: 75%;
   }
+
+  .couple-section .couple{
+    flex: 0 0 100% ;
+    max-width: 100%;
+    padding: 0 15px;
+}
 
 }
 
@@ -634,6 +665,11 @@ button:hover {
   .rowku .col-md-6 img{
       width: 70%;
   }
+
+  .event-card{
+    width: 100%;
+  }
+
 
 }
 
