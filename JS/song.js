@@ -1,4 +1,6 @@
-window.addEventListener('load', function() {
-    const audioElement = document.getElementById('myAudio');
+const playButton = document.getElementById('playButton');
+const audioElement = document.getElementById('myAudio');
+
+playButton.addEventListener('click', function() {
     audioElement.play();
 });
